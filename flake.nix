@@ -39,7 +39,7 @@
       inputs.poetry2nix.follows = "poetry2nix";
     };
     pythoneda-infrastructure-python-packages = {
-      url = "github:pythoneda-infrastructure/python-packages/0.0.1a3";
+      url = "github:pythoneda-infrastructure/python-packages/0.0.1a4";
       inputs.pythoneda.follows = "pythoneda";
       inputs.pythoneda-infrastructure-base.follows =
         "pythoneda-infrastructure-base";
@@ -65,7 +65,7 @@
           pythoneda-application-python-packages =
             pythonPackages.buildPythonPackage rec {
               pname = "pythoneda-application-python-packages";
-              version = "0.0.1a3";
+              version = "0.0.1a4";
               src = ./.;
               format = "pyproject";
 
