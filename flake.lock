@@ -69,21 +69,21 @@
         ]
       },
       "locked": {
-        "lastModified": 1685370987,
-        "narHash": "sha256-N8VF0yTdVimxLgIR9y8j1XleuIJxtBNflIPGBc6AyDw=",
-        "owner": "rydnr",
-        "repo": "pythoneda",
-        "rev": "c82d4288068473673e7cb85a4ae19cb40b3d9758",
+        "lastModified": 1685546820,
+        "narHash": "sha256-l2vabcrpvFAApLXmgoe2AA4qmB9bg7eWcWuY2x7ignY=",
+        "owner": "pythoneda",
+        "repo": "base",
+        "rev": "7e6a957fcffea9ad2505325fa674825c29182106",
         "type": "github"
       },
       "original": {
-        "owner": "rydnr",
-        "ref": "0.0.1a5",
-        "repo": "pythoneda",
+        "owner": "pythoneda",
+        "ref": "0.0.1a7",
+        "repo": "base",
         "type": "github"
       }
     },
-    "pythoneda-application-layer": {
+    "pythoneda-application-base": {
       "inputs": {
         "flake-utils": [
           "flake-utils"
@@ -97,22 +97,22 @@
         "pythoneda": [
           "pythoneda"
         ],
-        "pythoneda-infrastructure-layer": [
-          "pythoneda-infrastructure-layer"
+        "pythoneda-infrastructure-base": [
+          "pythoneda-infrastructure-base"
         ]
       },
       "locked": {
-        "lastModified": 1685434496,
-        "narHash": "sha256-dFkHPWDarvCBvuF4/K1ipTZdVVoL4WQtLys9tfhI9t0=",
-        "owner": "rydnr",
-        "repo": "pythoneda-application-layer",
-        "rev": "542dd7a7ab76da00af8d1fb9c354a2263e03c501",
+        "lastModified": 1685548761,
+        "narHash": "sha256-FFBaq7z0iU/CKCBqR9Qn0Gvtix2x4sqVDAcLDOa1ugo=",
+        "owner": "pythoneda-application",
+        "repo": "base",
+        "rev": "632ded101115b7fd9a368a1f6d64143bc05523d2",
         "type": "github"
       },
       "original": {
-        "owner": "rydnr",
-        "ref": "0.0.1a3",
-        "repo": "pythoneda-application-layer",
+        "owner": "pythoneda-application",
+        "ref": "0.0.1a5",
+        "repo": "base",
         "type": "github"
       }
     },
@@ -136,21 +136,21 @@
         ]
       },
       "locked": {
-        "lastModified": 1685389975,
-        "narHash": "sha256-m4XtFsIQD6WQVgcbozgowFbL+p4w6fVA0jMO+4Gx6eI=",
-        "owner": "rydnr",
-        "repo": "pythoneda-git-repositories",
-        "rev": "ec6dcafe4a712acfc615ea6e31d9add95abf4f40",
+        "lastModified": 1685549018,
+        "narHash": "sha256-rD5EBtJlD6KygN17rjOLoIDpeCE6p1EGmrGCvRmRbPs=",
+        "owner": "pythoneda",
+        "repo": "git-repositories",
+        "rev": "7df25b5e468d1bb9f46f57b1118f910dd24e9f23",
         "type": "github"
       },
       "original": {
-        "owner": "rydnr",
-        "ref": "0.0.1a3",
-        "repo": "pythoneda-git-repositories",
+        "owner": "pythoneda",
+        "ref": "0.0.1a4",
+        "repo": "git-repositories",
         "type": "github"
       }
     },
-    "pythoneda-infrastructure-layer": {
+    "pythoneda-infrastructure-base": {
       "inputs": {
         "flake-utils": [
           "flake-utils"
@@ -166,51 +166,53 @@
         ]
       },
       "locked": {
-        "lastModified": 1685389722,
-        "narHash": "sha256-DhyX0kbomluWNJPIHqTokAeCnHbAUhLtCad3A3H96PQ=",
-        "owner": "rydnr",
-        "repo": "pythoneda-infrastructure-layer",
-        "rev": "d66c306048516ca9e1f6543b6fd54ba05d9d2f23",
+        "lastModified": 1685548515,
+        "narHash": "sha256-8G5kxz3c9iPTNrJ0DJY3kvsvlaBF2HvkhmAZtOu2fCU=",
+        "owner": "pythoneda-infrastructure",
+        "repo": "base",
+        "rev": "41792cfa371e7c5f4c36b0a12a7a3bbe7bfe7c5c",
         "type": "github"
       },
       "original": {
-        "owner": "rydnr",
-        "ref": "0.0.1a2",
-        "repo": "pythoneda-infrastructure-layer",
+        "owner": "pythoneda-infrastructure",
+        "ref": "0.0.1a5",
+        "repo": "base",
         "type": "github"
       }
     },
-    "pythoneda-nix-shared": {
+    "pythoneda-infrastructure-python-packages": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-python-packages",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-python-packages",
           "nixos"
         ],
         "poetry2nix": [
-          "pythoneda-python-packages",
-          "flake-utils"
+          "poetry2nix"
         ],
         "pythoneda": [
-          "pythoneda-python-packages",
           "pythoneda"
+        ],
+        "pythoneda-infrastructure-base": [
+          "pythoneda-infrastructure-base"
+        ],
+        "pythoneda-python-packages": [
+          "pythoneda-python-packages"
         ]
       },
       "locked": {
-        "lastModified": 1685433315,
-        "narHash": "sha256-hfGmmjjZrj9L28N3DpYpfsAU8U/nOA4I4cxxFTZ+AGY=",
-        "owner": "rydnr",
-        "repo": "pythoneda-nix-shared",
-        "rev": "0c9e9c19017783d54a75c5648d290f5fa3fb44bf",
+        "lastModified": 1685552926,
+        "narHash": "sha256-P+bkrmPaqxepPcNwXJuLbEizD+G6m9gaJuUkvnh2ZlU=",
+        "owner": "pythoneda-infrastructure",
+        "repo": "python-packages",
+        "rev": "d31af07690dd7bcce2e7d2d50215918af8c99a93",
         "type": "github"
       },
       "original": {
-        "owner": "rydnr",
+        "owner": "pythoneda-infrastructure",
         "ref": "0.0.1a3",
-        "repo": "pythoneda-nix-shared",
+        "repo": "python-packages",
         "type": "github"
       }
     },
@@ -229,56 +231,54 @@
           "pythoneda"
         ],
         "pythoneda-git-repositories": "pythoneda-git-repositories",
-        "pythoneda-nix-shared": "pythoneda-nix-shared"
+        "pythoneda-shared-nix": "pythoneda-shared-nix"
       },
       "locked": {
-        "lastModified": 1685433514,
-        "narHash": "sha256-21VZt0Jp4Pq/y8O5E50fIYvJt6O2QgwfkOqGN1ct5+k=",
-        "owner": "rydnr",
-        "repo": "pythoneda-python-packages",
-        "rev": "913681838f6b251e60328bb5a88e11f55afe6d02",
+        "lastModified": 1685552434,
+        "narHash": "sha256-ZFd9Qdt+UXGB1n0UN6Hog55sniTsrJ3UI3GmTcvN0dc=",
+        "owner": "pythoneda",
+        "repo": "python-packages",
+        "rev": "8239b0f7f93e5f952210c0af258cdc3647f8af47",
         "type": "github"
       },
       "original": {
-        "owner": "rydnr",
-        "ref": "0.0.1a2",
-        "repo": "pythoneda-python-packages",
+        "owner": "pythoneda",
+        "ref": "0.0.1a3",
+        "repo": "python-packages",
         "type": "github"
       }
     },
-    "pythoneda-python-packages-infrastructure": {
+    "pythoneda-shared-nix": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-python-packages",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-python-packages",
           "nixos"
         ],
         "poetry2nix": [
-          "poetry2nix"
+          "pythoneda-python-packages",
+          "flake-utils"
         ],
         "pythoneda": [
+          "pythoneda-python-packages",
           "pythoneda"
-        ],
-        "pythoneda-infrastructure-layer": [
-          "pythoneda-infrastructure-layer"
-        ],
-        "pythoneda-python-packages": [
-          "pythoneda-python-packages"
         ]
       },
       "locked": {
-        "lastModified": 1685434044,
-        "narHash": "sha256-9QfjfFD1sZcgPta63n9VZBcSiTrtWH0J7puGw4tjyNY=",
-        "owner": "rydnr",
-        "repo": "pythoneda-python-packages-infrastructure",
-        "rev": "54b8e2c82f7f0271fdd9041ab4875cf5aea02de9",
+        "lastModified": 1685550643,
+        "narHash": "sha256-//n4MCHKY8nU/oX4Lx4FMGq9SwyKcSPHpBMSX8c9wbY=",
+        "owner": "pythoneda-shared",
+        "repo": "nix",
+        "rev": "962fd68bf3e049cd269db448b3d498381a27bec3",
         "type": "github"
       },
       "original": {
-        "owner": "rydnr",
-        "ref": "0.0.1a2",
-        "repo": "pythoneda-python-packages-infrastructure",
+        "owner": "pythoneda-shared",
+        "ref": "0.0.1a4",
+        "repo": "nix",
         "type": "github"
       }
     },
@@ -288,10 +288,10 @@
         "nixos": "nixos",
         "poetry2nix": "poetry2nix",
         "pythoneda": "pythoneda",
-        "pythoneda-application-layer": "pythoneda-application-layer",
-        "pythoneda-infrastructure-layer": "pythoneda-infrastructure-layer",
-        "pythoneda-python-packages": "pythoneda-python-packages",
-        "pythoneda-python-packages-infrastructure": "pythoneda-python-packages-infrastructure"
+        "pythoneda-application-base": "pythoneda-application-base",
+        "pythoneda-infrastructure-base": "pythoneda-infrastructure-base",
+        "pythoneda-infrastructure-python-packages": "pythoneda-infrastructure-python-packages",
+        "pythoneda-python-packages": "pythoneda-python-packages"
       }
     }
   },

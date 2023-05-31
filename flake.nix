@@ -10,39 +10,39 @@
       inputs.flake-utils.follows = "flake-utils";
     };
     pythoneda = {
-      url = "github:rydnr/pythoneda/0.0.1a5";
+      url = "github:pythoneda/base/0.0.1a7";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
       inputs.poetry2nix.follows = "poetry2nix";
     };
-    pythoneda-infrastructure-layer = {
-      url = "github:rydnr/pythoneda-infrastructure-layer/0.0.1a2";
+    pythoneda-infrastructure-base = {
+      url = "github:pythoneda-infrastructure/base/0.0.1a5";
       inputs.pythoneda.follows = "pythoneda";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
       inputs.poetry2nix.follows = "poetry2nix";
     };
-    pythoneda-application-layer = {
-      url = "github:rydnr/pythoneda-application-layer/0.0.1a3";
+    pythoneda-application-base = {
+      url = "github:pythoneda-application/base/0.0.1a5";
       inputs.pythoneda.follows = "pythoneda";
-      inputs.pythoneda-infrastructure-layer.follows =
-        "pythoneda-infrastructure-layer";
+      inputs.pythoneda-infrastructure-base.follows =
+        "pythoneda-infrastructure-base";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
       inputs.poetry2nix.follows = "poetry2nix";
     };
     pythoneda-python-packages = {
-      url = "github:rydnr/pythoneda-python-packages/0.0.1a2";
+      url = "github:pythoneda/python-packages/0.0.1a3";
       inputs.pythoneda.follows = "pythoneda";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
       inputs.poetry2nix.follows = "poetry2nix";
     };
-    pythoneda-python-packages-infrastructure = {
-      url = "github:rydnr/pythoneda-python-packages-infrastructure/0.0.1a2";
+    pythoneda-infrastructure-python-packages = {
+      url = "github:pythoneda-infrastructure/python-packages/0.0.1a3";
       inputs.pythoneda.follows = "pythoneda";
-      inputs.pythoneda-infrastructure-layer.follows =
-        "pythoneda-infrastructure-layer";
+      inputs.pythoneda-infrastructure-base.follows =
+        "pythoneda-infrastructure-base";
       inputs.pythoneda-python-packages.follows = "pythoneda-python-packages";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
@@ -58,22 +58,23 @@
         pythonPackages = python.pkgs;
         description = "Application layer of PythonEDA Python Packages";
         license = pkgs.lib.licenses.gpl3;
+        homepage = "https://github.com/pythoneda-application/python-packages";
         maintainers = with pkgs.lib.maintainers; [ ];
       in rec {
         packages = {
-          pythoneda-python-packages-application =
+          pythoneda-application-python-packages =
             pythonPackages.buildPythonPackage rec {
-              pname = "pythoneda-python-packages-application";
-              version = "0.0.1a2";
+              pname = "pythoneda-application-python-packages";
+              version = "0.0.1a3";
               src = ./.;
               format = "pyproject";
 
               nativeBuildInputs = [ pkgs.poetry ];
 
               propagatedBuildInputs = with pythonPackages; [
-                pythoneda-application-layer.packages.${system}.pythoneda-application-layer
+                pythoneda-application-base.packages.${system}.pythoneda-application-base
+                pythoneda-infrastructure-python-packages.packages.${system}.pythoneda-infrastructure-python-packages
                 pythoneda-python-packages.packages.${system}.pythoneda-python-packages
-                pythoneda-python-packages-infrastructure.packages.${system}.pythoneda-python-packages-infrastructure
               ];
 
               checkInputs = with pythonPackages; [ pytest ];
@@ -84,7 +85,7 @@
                 inherit description license homepage maintainers;
               };
             };
-          default = packages.pythoneda-python-packages-application;
+          default = packages.pythoneda-application-python-packages;
           meta = with lib; {
             inherit description license homepage maintainers;
           };

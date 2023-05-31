@@ -3,11 +3,11 @@ from PythonEDAApplication.pythoneda import PythonEDA
 
 import asyncio
 
-class EcosystemPythonPackages(PythonEDA):
+class PythonPackages(PythonEDA):
 
     def __init__(self):
         super().__init__()
 
 if __name__ == "__main__":
 
-    asyncio.run(EcosystemPythonPackages.main())
+    asyncio.run(PythonPackages.main())

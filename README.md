@@ -1,6 +1,6 @@
-# Application layer of PythonEDA Git Repositories package
+# Application layer of PythonEDA Python Packages
 
-This package provides the application layer of PythonEDA Git Repositories package.
+This package provides the application layer of PythonEDA Python Packages.
 
-This package  provides:
-- PythonEDAGitRepositoriesApplication/application.py: An application that runs PythonEDA Git Repositories.
+This package provides:
+- [PythonEDAApplicationPythonPackages/application.py](PythonEDAApplicationPythonPackages/application.py): An application that runs PythonEDA Python Packages.
